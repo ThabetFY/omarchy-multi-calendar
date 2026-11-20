@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "thabetfy.multi-calendar",
+  "name": "Multi Calendar · التقويم المتعدد",
+  "version": "1.0.0",
+  "author": "ThabetFY (based on Omarchy)",
+  "description": "One or two calendars, local time, week numbers and year progress, with Arabic and English support.",
+  "kinds": ["bar-widget"],
+  "entryPoints": {
+    "barWidget": "BarWidget.qml"
+  },
+  "barWidget": {
+    "displayName": "Multi Calendar",
+    "description": "Date, time and a shared calendar grid",
+    "category": "Time",
+    "allowMultiple": false
+  }
+}

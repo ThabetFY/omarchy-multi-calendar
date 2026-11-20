@@ -1,0 +1,18 @@
+name: Validate
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: bash -n tools/check.sh tests/calendar-test.sh tests/helpers.sh
+      - run: bash tests/calendar-test.sh
+      - run: node --test tests/*.test.cjs
+      # Omarchy validation, Qt 6 lint and desktop checks run locally.
